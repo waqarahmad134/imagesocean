@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ImagesOcean - A Deep Sea of Stunning Visuals</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+  <header>
+    <nav>
+      <div class="container">
+        <h1>ImagesOcean</h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>A Deep Sea of Stunning Visuals</h2>
+        <p>Discover a curated collection of high-quality images that inspire and captivate</p>
+        <div class="hero-buttons">
+          <a href="gallery.html" class="btn primary">Explore Images</a>
+          <a href="blog.html" class="btn secondary">Read Our Blog</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-images">
+      <div class="container">
+        <h3>Featured Images</h3>
+        <div class="image-grid">
+          <div class="image-item">
+            <img loading="lazy" src="images/JL3ouMweWr9m.jpg" alt="Ocean Sunset" />
+            <div class="image-info">
+              <h4>Ocean Sunset</h4>
+              <p>Ocean</p>
+            </div>
+          </div>
+          <div class="image-item">
+            <img loading="lazy" src="images/7xxwBgssqbI7.jpg" alt="Abstract Ocean" />
+            <div class="image-info">
+              <h4>Abstract Ocean</h4>
+              <p>Abstract</p>
+            </div>
+          </div>
+          <div class="image-item">
+            <img loading="lazy" src="images/zYYrTE6mxQ5j.jpg" alt="Ocean Waves" />
+            <div class="image-info">
+              <h4>Ocean Waves</h4>
+              <p>Ocean</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="gallery.html" class="btn primary">View Full Gallery</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Links: <a href="index.html">Home</a> | <a href="gallery.html">Gallery</a> | <a href="blog.html">Blog</a> | <a href="contact.html">Contact</a></p>
+      <p>Copyright © 2025 ImagesOcean</p>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <img id="lightbox-img" alt="Expanded view" />
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
+
+

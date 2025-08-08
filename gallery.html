@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - ImagesOcean</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>ImagesOcean</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery-page py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Image Gallery</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Browse our curated collection of stunning visuals across different categories
+                    </p>
+                </div>
+
+                {/* Category Filter */}
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button class="btn" data-category="All">All</button>
+                    <button class="btn" data-category="Ocean">Ocean</button>
+                    <button class="btn" data-category="Nature">Nature</button>
+                    <button class="btn" data-category="Urban">Urban</button>
+                    <button class="btn" data-category="Abstract">Abstract</button>
+                </div>
+
+                {/* Image Grid */}
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div class="image-item" data-category="Ocean">
+                        <img src="images/qoFQaEDlQGt4.jpg" alt="Ocean Image 1">
+                        <div class="image-info">
+                            <h4>Ocean Image 1</h4>
+                            <p>Ocean</p>
+                        </div>
+                    </div>
+                    <div class="image-item" data-category="Nature">
+                        <img src="images/u0R5Nr8jVIkD.jpg" alt="Nature Image 1">
+                        <div class="image-info">
+                            <h4>Nature Image 1</h4>
+                            <p>Nature</p>
+                        </div>
+                    </div>
+                    <div class="image-item" data-category="Urban">
+                        <img src="images/kCX4OZHdkUPO.jpg" alt="Urban Image 1">
+                        <div class="image-info">
+                            <h4>Urban Image 1</h4>
+                            <p>Urban</p>
+                        </div>
+                    </div>
+                    <div class="image-item" data-category="Abstract">
+                        <img src="images/JL3ouMweWr9m.jpg" alt="Abstract Image 1">
+                        <div class="image-info">
+                            <h4>Abstract Image 1</h4>
+                            <p>Abstract</p>
+                        </div>
+                    </div>
+                    <div class="image-item" data-category="Ocean">
+                        <img src="images/YkZJuSQ4nXb8.jpg" alt="Ocean Image 2">
+                        <div class="image-info">
+                            <h4>Ocean Image 2</h4>
+                            <p>Ocean</p>
+                        </div>
+                    </div>
+                    <div class="image-item" data-category="Nature">
+                        <img src="images/7xxwBgssqbI7.jpg" alt="Nature Image 2">
+                        <div class="image-info">
+                            <h4>Nature Image 2</h4>
+                            <p>Nature</p>
+                        </div>
+                    </div>
+                    <div class="image-item" data-category="Urban">
+                        <img src="images/zYYrTE6mxQ5j.jpg" alt="Urban Image 2">
+                        <div class="image-info">
+                            <h4>Urban Image 2</h4>
+                            <p>Urban</p>
+                        </div>
+                    </div>
+                    <div class="image-item" data-category="Abstract">
+                        <img src="images/IbXbQfbBbObu.jpg" alt="Abstract Image 2">
+                        <div class="image-info">
+                            <h4>Abstract Image 2</h4>
+                            <p>Abstract</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Links: <a href="index.html">Home</a> | <a href="gallery.html">Gallery</a> | <a href="blog.html">Blog</a> | <a href="contact.html">Contact</a></p>
+            <p>Copyright © 2025 ImagesOcean</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const buttons = document.querySelectorAll(".gallery-page .btn");
+            const images = document.querySelectorAll(".gallery-page .image-item");
+
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const category = button.dataset.category;
+
+                    images.forEach(image => {
+                        if (category === "All" || image.dataset.category === category) {
+                            image.style.display = "block";
+                        } else {
+                            image.style.display = "none";
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
